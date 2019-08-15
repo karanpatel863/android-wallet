@@ -395,5 +395,13 @@
     <string name="owner_key">Owner key</string>
     <string name="paste_this_code_in_beam_wallet_on_your_desktop_to_proceed_restore_from_the_node">Paste this code in Beam Wallet on your desktop to proceed restore from the node.</string>
     <string name="once_you_ll_paste_the_code_restore_will_start_automatically">Once you’ll paste the code, restore will start automatically.</string>
-
+    <string name="initiated">Initiated</string>
+    <string name="latest_confirmation">Latest Confirmation</string>
+    <string name="share_transaction_details_value_placeholder">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</string>
+    <string name="share_transaction_details_value_placeholder_long">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</string>
+    <string name="share_transaction_details_value_fee_placeholder">0.005 (3%)</string>
+    <string name="share_transaction_details_value_date_placeholder">10 Jun 2019  |  3:46 PM</string>
+    <string name="share_transaction_details_value_confirming_placeholder">Confirming (5/10)</string>
+    <string name="share_transaction_details_value_amount_placeholder">0.123</string>
+    <string name="share_transaction">Share transaction</string>
 </resources>

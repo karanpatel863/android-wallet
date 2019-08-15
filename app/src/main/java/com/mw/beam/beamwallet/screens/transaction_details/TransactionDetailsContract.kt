@@ -16,8 +16,10 @@
 
 package com.mw.beam.beamwallet.screens.transaction_details
 
+import android.graphics.Bitmap
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.View
 import com.mw.beam.beamwallet.base_screen.MvpPresenter
 import com.mw.beam.beamwallet.base_screen.MvpRepository
 import com.mw.beam.beamwallet.base_screen.MvpView
@@ -26,6 +28,7 @@ import com.mw.beam.beamwallet.core.helpers.Category
 import com.mw.beam.beamwallet.core.helpers.TxStatus
 import io.reactivex.Observable
 import io.reactivex.subjects.Subject
+import java.io.File
 
 /**
  * Created by vain onnellinen on 10/18/18.
@@ -47,6 +50,8 @@ interface TransactionDetailsContract {
         fun showDeleteSnackBar(txDescription: TxDescription)
         fun configSenderAddressInfo(walletAddress: WalletAddress?)
         fun configReceiverAddressInfo(walletAddress: WalletAddress?)
+        fun convertViewIntoBitmap(txDescription: TxDescription?): Bitmap?
+        fun shareTransactionDetails(file: File?)
     }
 
     interface Presenter : MvpPresenter<View> {
@@ -58,6 +63,8 @@ interface TransactionDetailsContract {
         fun onOpenInBlockExplorerPressed()
         fun onOpenLinkPressed()
         fun onRepeatTransaction()
+        fun onSharePressed()
+
     }
 
     interface Repository : MvpRepository {
@@ -70,5 +77,6 @@ interface TransactionDetailsContract {
         fun requestProof(txId: String)
         fun isAllowOpenExternalLink(): Boolean
         fun getCategoryForAddress(address: String): Category?
+        fun saveImage(bitmap: Bitmap?): File?
     }
 }
