@@ -397,11 +397,5 @@
     <string name="once_you_ll_paste_the_code_restore_will_start_automatically">Once you’ll paste the code, restore will start automatically.</string>
     <string name="initiated">Initiated</string>
     <string name="latest_confirmation">Latest Confirmation</string>
-    <string name="share_transaction_details_value_placeholder">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</string>
-    <string name="share_transaction_details_value_placeholder_long">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</string>
-    <string name="share_transaction_details_value_fee_placeholder">0.005 (3%)</string>
-    <string name="share_transaction_details_value_date_placeholder">10 Jun 2019  |  3:46 PM</string>
-    <string name="share_transaction_details_value_confirming_placeholder">Confirming (5/10)</string>
-    <string name="share_transaction_details_value_amount_placeholder">0.123</string>
     <string name="share_transaction">Share transaction</string>
 </resources>

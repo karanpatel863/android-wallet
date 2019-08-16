@@ -50,7 +50,7 @@ interface TransactionDetailsContract {
         fun showDeleteSnackBar(txDescription: TxDescription)
         fun configSenderAddressInfo(walletAddress: WalletAddress?)
         fun configReceiverAddressInfo(walletAddress: WalletAddress?)
-        fun convertViewIntoBitmap(txDescription: TxDescription?): Bitmap?
+        fun convertViewIntoBitmap(): Bitmap?
         fun shareTransactionDetails(file: File?)
     }
 
