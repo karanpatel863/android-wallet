@@ -52,19 +52,20 @@ class LanguageFragment: BaseFragment<LanguagePresenter>(), LanguageContract.View
                 getString(R.string.restart_now),
                 {
                     adapter.setSelected(language)
-                    presenter?.onRestartPressed(language)
+                    presenter?.onSelectLanguage(language)
                 },
                 null,
                 getString(R.string.cancel),
                 {})
     }
 
-    override fun logOut() {
+    override fun changeLanguage() {
         App.isAuthenticated = false
         startActivity(Intent(context, AppActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         })
-        activity?.finish()
+        activity?.recreate()
+
     }
 
     override fun initPresenter(): BasePresenter<out MvpView, out MvpRepository> {

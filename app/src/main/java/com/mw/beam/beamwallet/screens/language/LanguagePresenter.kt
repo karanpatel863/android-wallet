@@ -16,6 +16,7 @@
 
 package com.mw.beam.beamwallet.screens.language
 
+import android.util.Log
 import com.mw.beam.beamwallet.base_screen.BasePresenter
 import com.mw.beam.beamwallet.core.helpers.LocaleHelper
 
@@ -33,14 +34,11 @@ class LanguagePresenter(view: LanguageContract.View?, repository: LanguageContra
         view?.init(sortedLanguages, repository.getCurrentLanguage())
     }
 
-    override fun onRestartPressed(language: LocaleHelper.SupportedLanguage) {
-        repository.setLanguage(language)
-        view?.logOut()
-    }
 
     override fun onSelectLanguage(language: LocaleHelper.SupportedLanguage) {
         if (language.languageCode != repository.getCurrentLanguage().languageCode) {
-            view?.showConfirmDialog(language)
+            repository.setLanguage(language)
+            view?.changeLanguage()
         }
     }
 }
